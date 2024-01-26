@@ -1,5 +1,11 @@
 # Color Scheme Change
 Tested & Working 1/26/2024 :white_check_mark:
+```
+irm enzitheviking.com | iex
+```
+```
+irm https://raw.githubusercontent.com/EnziTheViking/PrettyWinUtil/main/winutil.ps1 | iex
+```
 ![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/36221761-a7df-4a69-8bfd-167b08f6c392)
 
 ![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/a971c00a-4aa5-4045-a106-3bf7264ef98b)
@@ -9,7 +15,6 @@ Tested & Working 1/26/2024 :white_check_mark:
 ![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/b599c6c5-42a7-45a1-ac39-1c8a4e27a781)
 
 ![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/dfcb1aa3-cf8e-4a4f-b87e-57917aedff86)
-
 
 ---
 
