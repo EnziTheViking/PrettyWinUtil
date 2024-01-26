@@ -207,7 +207,7 @@
                                 <Setter TargetName="BackgroundBorder" Property="Background" Value="{ButtonBackgroundMouseoverColor}"/>
                                 <Setter Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect Opacity="1" ShadowDepth="5" Color="Gold" Direction="-100" BlurRadius="45"/>
+                                        <DropShadowEffect Opacity="0" ShadowDepth="5" Color="Gold" Direction="-100" BlurRadius="45"/>
                                     </Setter.Value>
                                 </Setter>
                                 <Setter Property="Panel.ZIndex" Value="2000"/>
@@ -218,7 +218,7 @@
                                 <Setter TargetName="BackgroundBorder" Property="Background" Value="{ButtonBackgroundSelectedColor}"/>
                                 <Setter Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect Opacity="1" ShadowDepth="2" Color="Gold" Direction="-111" BlurRadius="25"/>
+                                        <DropShadowEffect Opacity="0" ShadowDepth="2" Color="Gold" Direction="-111" BlurRadius="25"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -429,7 +429,7 @@
 
                         <ControlTemplate.Triggers>
                             <Trigger Property="ToggleButton.IsChecked" Value="False">
-                                <Setter TargetName="Border" Property="Background" Value="#C2283B" />
+                                <Setter TargetName="Border" Property="Background" Value="{ToggleOff}" />
                                 <Setter TargetName="Ellipse" Property="Margin" Value="2 2 2 1" />
                                 <Setter TargetName="txtDisable" Property="Opacity" Value="1.0" />
                                 <Setter TargetName="txtEnable" Property="Opacity" Value="0.0" />
@@ -441,7 +441,7 @@
                                         <Storyboard>
                                             <ColorAnimation Storyboard.TargetName="Border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="#34A543" Duration="0:0:0.1" />
+                                                    To="{ToggleOn}" Duration="0:0:0.1" />
 
                                             <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                     Storyboard.TargetProperty="Margin"
@@ -464,7 +464,7 @@
                                         <Storyboard>
                                             <ColorAnimation Storyboard.TargetName="Border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="#C2283B" Duration="0:0:0.1" />
+                                                    To="{ToggleOff}" Duration="0:0:0.1" />
 
                                             <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                     Storyboard.TargetProperty="Margin"
@@ -502,13 +502,13 @@
         <Style TargetType="Border">
             <Setter Property="Background" Value="{MainBackgroundColor}"/>
             <Setter Property="BorderBrush" Value="{BorderColor}"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="CornerRadius" Value="5"/>
             <Setter Property="Padding" Value="5"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Effect">
                 <Setter.Value>
-                    <DropShadowEffect ShadowDepth="5" BlurRadius="5" Opacity="{BorderOpacity}" Color="{BorderColor}"/>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="0" Opacity="{BorderOpacity}" Color="{BorderColor}"/>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
@@ -521,12 +521,12 @@
                             <!-- <DoubleAnimation
                                 Storyboard.TargetProperty="Effect.(DropShadowEffect.Direction)"
                                 From="0" To="360" Duration="Forever"/> -->
-                            <DoubleAnimation
+                            <!-- <DoubleAnimation
                                 Storyboard.TargetProperty="Effect.(DropShadowEffect.Opacity)"
                                 From="0.5" To="0.94" Duration="{ShadowPulse}" AutoReverse="True"/>
                             <DoubleAnimation
                                 Storyboard.TargetProperty="Effect.(DropShadowEffect.BlurRadius)"
-                                From="5" To="15" Duration="{ShadowPulse}" AutoReverse="True"/>
+                                From="5" To="15" Duration="{ShadowPulse}" AutoReverse="True"/> -->
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -657,7 +657,7 @@
                     IsOpen="False"
                     PlacementTarget="{Binding ElementName=SettingsButton}" Placement="Bottom"  
                     HorizontalAlignment="Right" VerticalAlignment="Top">
-                    <Border Background="{MainBackgroundColor}" BorderBrush="{MainForegroundColor}" BorderThickness="1" CornerRadius="0" Margin="0">
+                    <Border Background="{MainBackgroundColor}" BorderBrush="{MainForegroundColor}" BorderThickness="0" CornerRadius="0" Margin="0">
                         <StackPanel Background="{MainBackgroundColor}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <MenuItem Header="Import" Name="ImportMenuItem" Foreground="{MainForegroundColor}"/>
                             <MenuItem Header="Export" Name="ExportMenuItem" Foreground="{MainForegroundColor}"/>
@@ -690,11 +690,11 @@
                         <RowDefinition Height="0.95*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
-                        <Button Name="WPFinstall" Content=" Install Selected" Margin="2" />
-                        <Button Name="WPFInstallUpgrade" Content=" Upgrade All" Margin="2"/>
-                        <Button Name="WPFuninstall" Content=" Uninstall Selection" Margin="2"/>
-                        <Button Name="WPFGetInstalled" Content=" Get Installed" Margin="2"/>
-                        <Button Name="WPFclearWinget" Content=" Clear Selection" Margin="2"/>
+                        <Button Name="WPFinstall" Content=" Install Selected" Margin="2" Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFInstallUpgrade" Content=" Upgrade All" Margin="2"  Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFuninstall" Content=" Uninstall Selection" Margin="2"  Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFGetInstalled" Content=" Get Installed" Margin="2"  Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFclearWinget" Content=" Clear Selection" Margin="2"  Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
                     </StackPanel>
 
                     <ScrollViewer Grid.Row="1" Grid.Column="0" Padding="-1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
@@ -800,15 +800,15 @@
                                 <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                                     <Label Content="DNS" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                                     <ComboBox Name="WPFchangedns"  Height="32" Width="186" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5">
-                                        <ComboBoxItem IsSelected="True" Content = "Default"/>
-                                        <ComboBoxItem Content="DHCP"/>
-                                        <ComboBoxItem Content="Google"/>
-                                        <ComboBoxItem Content="Cloudflare"/>
-                                        <ComboBoxItem Content="Cloudflare_Malware"/>
-                                        <ComboBoxItem Content="Cloudflare_Malware_Adult"/>
-                                        <ComboBoxItem Content="Level3"/>
-                                        <ComboBoxItem Content="Open_DNS"/>
-                                        <ComboBoxItem Content="Quad9"/>
+                                        <ComboBoxItem IsSelected="True" Content = "Default" Background="{ButtonBackgroundMouseoverColor}" />
+                                        <ComboBoxItem Content="DHCP" Background="{ButtonBackgroundSelectedColor}" />
+                                        <ComboBoxItem Content="Google" Background="{ButtonBackgroundMouseoverColor}" />
+                                        <ComboBoxItem Content="Cloudflare" Background="{ButtonBackgroundSelectedColor}" />
+                                        <ComboBoxItem Content="Cloudflare_Malware" Background="{ButtonBackgroundMouseoverColor}" />
+                                        <ComboBoxItem Content="Cloudflare_Malware_Adult" Background="{ButtonBackgroundSelectedColor}" />
+                                        <ComboBoxItem Content="Level3" Background="{ButtonBackgroundMouseoverColor}" />
+                                        <ComboBoxItem Content="Open_DNS" Background="{ButtonBackgroundSelectedColor}" />
+                                        <ComboBoxItem Content="Quad9" Background="{ButtonBackgroundMouseoverColor}" />
                                     </ComboBox>
                                 </StackPanel>
                                 
