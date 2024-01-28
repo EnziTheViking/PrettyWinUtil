@@ -31,7 +31,7 @@ function Show-CustomDialog {
     $foregroundColor = [Windows.Media.Brushes]::White
     $backgroundColor = [Windows.Media.Brushes]::Black
     $font = New-Object Windows.Media.FontFamily("Consolas")
-    $borderColor = [Windows.Media.Brushes]::Green
+    $borderColor = [Windows.Media.Brushes]::black
     $buttonBackgroundColor = [Windows.Media.Brushes]::Black
     $buttonForegroundColor = [Windows.Media.Brushes]::White
     $shadowColor = [Windows.Media.ColorConverter]::ConvertFromString("#AAAAAAAA")
@@ -64,7 +64,7 @@ function Show-CustomDialog {
 
     # Apply drop shadow effect to the border
     $dialog.Effect = $dropShadow
-
+    
     $dialog.Content = $border
 
     # Create a grid for layout inside the Border

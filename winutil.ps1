@@ -10,7 +10,7 @@
     Author         : Chris Titus @christitustech
     Runspace Author: @DeveloperDurp
     GitHub         : https://github.com/ChrisTitusTech
-    Version        : 24.01.26
+    Version        : 24.01.27
 #>
 param (
     [switch]$Debug,
@@ -47,7 +47,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # Variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "24.01.26"
+$sync.version = "24.01.27"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -2036,7 +2036,7 @@ function Show-CustomDialog {
     $foregroundColor = [Windows.Media.Brushes]::White
     $backgroundColor = [Windows.Media.Brushes]::Black
     $font = New-Object Windows.Media.FontFamily("Consolas")
-    $borderColor = [Windows.Media.Brushes]::Green
+    $borderColor = [Windows.Media.Brushes]::black
     $buttonBackgroundColor = [Windows.Media.Brushes]::Black
     $buttonForegroundColor = [Windows.Media.Brushes]::White
     $shadowColor = [Windows.Media.ColorConverter]::ConvertFromString("#AAAAAAAA")
@@ -2069,7 +2069,7 @@ function Show-CustomDialog {
 
     # Apply drop shadow effect to the border
     $dialog.Effect = $dropShadow
-
+    
     $dialog.Content = $border
 
     # Create a grid for layout inside the Border
@@ -4730,7 +4730,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                     Margin="0,5,5,0" 
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE713;"/>
-                <Popup Grid.Column="1" Name="SettingsPopup" 
+                <Popup Grid.Column="1" Name="SettingsPopup"
                     IsOpen="False"
                     PlacementTarget="{Binding ElementName=SettingsButton}" Placement="Bottom"  
                     HorizontalAlignment="Right" VerticalAlignment="Top">
@@ -4743,7 +4743,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                         </StackPanel>
                     </Border>
                 </Popup>
- 
+
             <Button 
                 Grid.Column="2"
                 Content="&#xD7;" BorderThickness="0" 
@@ -10744,14 +10744,19 @@ $sync["AboutMenuItem"].Add_Click({
     $sync["SettingsPopup"].IsOpen = $false
     # Example usage
     $authorInfo = @"
+FORK     : PrettyWinUtil
+Author   : @EnziTheViking
+GitHub   : https://github.com/EnziTheViking/PrettyWinUtil
+
+OG Software
 Author   : @christitustech
 Runspace : @DeveloperDurp
 GUI      : @KonTy
 MicroWin : @KonTy
 GitHub   : https://github.com/ChrisTitusTech/winutil
 Version  : $($sync.version)
-"@    
-    Show-CustomDialog -Message $authorInfo -Width 400
+"@
+    Show-CustomDialog -Message $authorInfo -Width 400 -height 270
 })
 
 $sync["Form"].ShowDialog() | out-null

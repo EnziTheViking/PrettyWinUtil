@@ -653,7 +653,7 @@
                     Margin="0,5,5,0" 
                     FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE713;"/>
-                <Popup Grid.Column="1" Name="SettingsPopup" 
+                <Popup Grid.Column="1" Name="SettingsPopup"
                     IsOpen="False"
                     PlacementTarget="{Binding ElementName=SettingsButton}" Placement="Bottom"  
                     HorizontalAlignment="Right" VerticalAlignment="Top">
@@ -666,7 +666,7 @@
                         </StackPanel>
                     </Border>
                 </Popup>
- 
+
             <Button 
                 Grid.Column="2"
                 Content="&#xD7;" BorderThickness="0" 
