@@ -1,15 +1,15 @@
 # Color Scheme Change
-Tested & Working 1/26/2024 :white_check_mark:
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/36221761-a7df-4a69-8bfd-167b08f6c392)
+Tested & Working 4/25/2024 :white_check_mark:
 
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/a971c00a-4aa5-4045-a106-3bf7264ef98b)
+![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/9d999939-4936-43dd-9a76-f82a44dfba2b)
 
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/3f422f4c-9781-4411-b246-54c0707c500b)
+![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/6d71bb2c-ea9b-4b5d-8dc8-917593bc215d)
 
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/b599c6c5-42a7-45a1-ac39-1c8a4e27a781)
+![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/904e9e51-5deb-49db-873e-b84e627478fb)
 
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/dfcb1aa3-cf8e-4a4f-b87e-57917aedff86)
+![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/dc92cbd3-bf71-44df-87e5-799d504871ec)
 
+![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/5c97d961-5c78-48a2-bdf8-d2fe84c6374f)
 
 ---
 
