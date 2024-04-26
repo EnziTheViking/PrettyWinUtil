@@ -7897,66 +7897,74 @@ $sync.configs.preset = '{
 }' | convertfrom-json
 $sync.configs.themes = '{
     "Classic":  {
-                    "ComboBoxBackgroundColor":  "#FFFFFF",
-                    "LabelboxForegroundColor":  "#000000",
-                    "MainForegroundColor":  "#000000",
-                    "MainBackgroundColor":  "#FFFFFF",
-                    "LabelBackgroundColor":  "#FAFAFA",
-                    "LinkForegroundColor":  "#000000",
+                    "ComboBoxForegroundColor":  "#fcfcfd",
+                    "ComboBoxBackgroundColor":  "#1f72b5",
+                    "LabelboxForegroundColor":  "#fcfcfd",
+                    "MainForegroundColor":  "#fcfcfd",
+                    "MainBackgroundColor":  "#1f1f1f",
+                    "LabelBackgroundColor":  "#1f1f1f",
+                    "LinkForegroundColor":  "#1f72b5",
                     "LinkHoverForegroundColor":  "#000000",
                     "GroupBorderBackgroundColor":  "#000000",
-                    "ComboBoxForegroundColor":  "#000000",
-                    "ButtonInstallBackgroundColor":  "#FFFFFF",
-                    "ButtonTweaksBackgroundColor":  "#FFFFFF",
-                    "ButtonConfigBackgroundColor":  "#FFFFFF",
-                    "ButtonUpdatesBackgroundColor":  "#FFFFFF",
-                    "ButtonInstallForegroundColor":  "#000000",
-                    "ButtonTweaksForegroundColor":  "#000000",
-                    "ButtonConfigForegroundColor":  "#000000",
-                    "ButtonUpdatesForegroundColor":  "#000000",
-                    "ButtonBackgroundColor":  "#F5F5F5",
-                    "ButtonBackgroundPressedColor":  "#1A1A1A",
-                    "CheckboxMouseOverColor":  "#999999",
-                    "ButtonBackgroundMouseoverColor":  "#C2C2C2",
-                    "ButtonBackgroundSelectedColor":  "#F0F0F0",
-                    "ButtonForegroundColor":  "#000000",
+                    "ButtonInstallBackgroundColor":  "#1f72b5",
+                    "ButtonTweaksBackgroundColor":  "#1f72b5",
+                    "ButtonConfigBackgroundColor":  "#1f72b5",
+                    "ButtonUpdatesBackgroundColor":  "#1f72b5",
+                    "ButtonInstallForegroundColor":  "#fcfcfd",
+                    "ButtonTweaksForegroundColor":  "#fcfcfd",
+                    "ButtonConfigForegroundColor":  "#fcfcfd",
+                    "ButtonUpdatesForegroundColor":  "#fcfcfd",
+                    "ButtonForegroundColor":  "#fcfcfd",
+                    "ButtonBackgroundMouseoverColor":  "#144974",
+                    "ButtonBackgroundSelectedColor":  "#0d2e49",
+                    "ButtonPage1BackgroundColor":  "#1f72b5",
+                    "ButtonBackgroundColor":  "#000000",
+                    "ButtonBackgroundPressedColor":  "#1f72b5",
+                    "CheckboxMouseOverColor":  "#fcfcfd",
+                    "ToggleOn":  "#35b355",
+                    "ToggleOff":  "#ff5757",
                     "ButtonBorderThickness":  "1",
                     "ButtonMargin":  "1",
                     "ButtonCornerRadius":  "2",
                     "ToggleButtonHeight":  "25",
                     "BorderColor":  "#000000",
-                    "BorderOpacity":  "0.2",
-                    "ShadowPulse":  "Forever"
+                    "BorderOpacity":  "0.0",
+                    "ShadowPulse":  "0:0:0"
                 },
     "Matrix":  {
-                   "ComboBoxBackgroundColor":  "#000000",
-                   "LabelboxForegroundColor":  "#FFEE58",
-                   "MainForegroundColor":  "#9CCC65",
-                   "MainBackgroundColor":  "#000000",
-                   "LabelBackgroundColor":  "#000000",
-                   "LinkForegroundColor":  "#add8e6",
-                   "LinkHoverForegroundColor":  "#FFFFFF",
-                   "ComboBoxForegroundColor":  "#FFEE58",
-                   "ButtonInstallBackgroundColor":  "#222222",
-                   "ButtonTweaksBackgroundColor":  "#333333",
-                   "ButtonConfigBackgroundColor":  "#444444",
-                   "ButtonUpdatesBackgroundColor":  "#555555",
-                   "ButtonInstallForegroundColor":  "#FFFFFF",
-                   "ButtonTweaksForegroundColor":  "#FFFFFF",
-                   "ButtonConfigForegroundColor":  "#FFFFFF",
-                   "ButtonUpdatesForegroundColor":  "#FFFFFF",
-                   "ButtonBackgroundColor":  "#000019",
-                   "ButtonBackgroundPressedColor":  "#FFFFFF",
-                   "ButtonBackgroundMouseoverColor":  "#A55A64",
-                   "ButtonBackgroundSelectedColor":  "#FF5733",
-                   "ButtonForegroundColor":  "#9CCC65",
+                   "ComboBoxForegroundColor":  "#fcfcfd",
+                   "ComboBoxBackgroundColor":  "#1f72b5",
+                   "LabelboxForegroundColor":  "#fcfcfd",
+                   "MainForegroundColor":  "#fcfcfd",
+                   "MainBackgroundColor":  "#1f1f1f",
+                   "LabelBackgroundColor":  "#1f1f1f",
+                   "LinkForegroundColor":  "#1f72b5",
+                   "LinkHoverForegroundColor":  "#000000",
+                   "GroupBorderBackgroundColor":  "#000000",
+                   "ButtonInstallBackgroundColor":  "#1f72b5",
+                   "ButtonTweaksBackgroundColor":  "#1f72b5",
+                   "ButtonConfigBackgroundColor":  "#1f72b5",
+                   "ButtonUpdatesBackgroundColor":  "#1f72b5",
+                   "ButtonInstallForegroundColor":  "#fcfcfd",
+                   "ButtonTweaksForegroundColor":  "#fcfcfd",
+                   "ButtonConfigForegroundColor":  "#fcfcfd",
+                   "ButtonUpdatesForegroundColor":  "#fcfcfd",
+                   "ButtonForegroundColor":  "#fcfcfd",
+                   "ButtonBackgroundMouseoverColor":  "#144974",
+                   "ButtonBackgroundSelectedColor":  "#0d2e49",
+                   "ButtonPage1BackgroundColor":  "#1f72b5",
+                   "ButtonBackgroundColor":  "#000000",
+                   "ButtonBackgroundPressedColor":  "#1f72b5",
+                   "CheckboxMouseOverColor":  "#fcfcfd",
+                   "ToggleOn":  "#35b355",
+                   "ToggleOff":  "#ff5757",
                    "ButtonBorderThickness":  "1",
                    "ButtonMargin":  "1",
                    "ButtonCornerRadius":  "2",
                    "ToggleButtonHeight":  "25",
-                   "BorderColor":  "#FFAC1C",
-                   "BorderOpacity":  "0.8",
-                   "ShadowPulse":  "0:0:3"
+                   "BorderColor":  "#000000",
+                   "BorderOpacity":  "0.0",
+                   "ShadowPulse":  "0:0:0"
                },
     "Dark":  {
                  "ComboBoxBackgroundColor":  "#000000",
@@ -10918,7 +10926,7 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                                 <Setter TargetName="BackgroundBorder" Property="Background" Value="{ButtonBackgroundMouseoverColor}"/>
                                 <Setter Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect Opacity="1" ShadowDepth="5" Color="Gold" Direction="-100" BlurRadius="45"/>
+                                        <DropShadowEffect Opacity="0" ShadowDepth="5" Color="Gold" Direction="-100" BlurRadius="45"/>
                                     </Setter.Value>
                                 </Setter>
                                 <Setter Property="Panel.ZIndex" Value="2000"/>
@@ -10929,7 +10937,7 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                                 <Setter TargetName="BackgroundBorder" Property="Background" Value="{ButtonBackgroundSelectedColor}"/>
                                 <Setter Property="Effect">
                                     <Setter.Value>
-                                        <DropShadowEffect Opacity="1" ShadowDepth="2" Color="Gold" Direction="-111" BlurRadius="25"/>
+                                        <DropShadowEffect Opacity="0" ShadowDepth="2" Color="Gold" Direction="-111" BlurRadius="25"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -11140,7 +11148,7 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
 
                         <ControlTemplate.Triggers>
                             <Trigger Property="ToggleButton.IsChecked" Value="False">
-                                <Setter TargetName="Border" Property="Background" Value="#C2283B" />
+                                <Setter TargetName="Border" Property="Background" Value="{ToggleOff}" />
                                 <Setter TargetName="Ellipse" Property="Margin" Value="2 2 2 1" />
                                 <Setter TargetName="txtDisable" Property="Opacity" Value="1.0" />
                                 <Setter TargetName="txtEnable" Property="Opacity" Value="0.0" />
@@ -11152,7 +11160,7 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                                         <Storyboard>
                                             <ColorAnimation Storyboard.TargetName="Border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="#34A543" Duration="0:0:0.1" />
+                                                    To="{ToggleOn}" Duration="0:0:0.1" />
 
                                             <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                     Storyboard.TargetProperty="Margin"
@@ -11175,7 +11183,7 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                                         <Storyboard>
                                             <ColorAnimation Storyboard.TargetName="Border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="#C2283B" Duration="0:0:0.1" />
+                                                    To="{ToggleOff}" Duration="0:0:0.1" />
 
                                             <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                     Storyboard.TargetProperty="Margin"
@@ -11213,13 +11221,13 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
         <Style TargetType="Border">
             <Setter Property="Background" Value="{MainBackgroundColor}"/>
             <Setter Property="BorderBrush" Value="{BorderColor}"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="CornerRadius" Value="5"/>
             <Setter Property="Padding" Value="5"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Effect">
                 <Setter.Value>
-                    <DropShadowEffect ShadowDepth="5" BlurRadius="5" Opacity="{BorderOpacity}" Color="{BorderColor}"/>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="0" Opacity="{BorderOpacity}" Color="{BorderColor}"/>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
@@ -11232,12 +11240,12 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                             <!-- <DoubleAnimation
                                 Storyboard.TargetProperty="Effect.(DropShadowEffect.Direction)"
                                 From="0" To="360" Duration="Forever"/> -->
-                            <DoubleAnimation
+                            <!-- <DoubleAnimation
                                 Storyboard.TargetProperty="Effect.(DropShadowEffect.Opacity)"
                                 From="0.5" To="0.94" Duration="{ShadowPulse}" AutoReverse="True"/>
                             <DoubleAnimation
                                 Storyboard.TargetProperty="Effect.(DropShadowEffect.BlurRadius)"
-                                From="5" To="15" Duration="{ShadowPulse}" AutoReverse="True"/>
+                                From="5" To="15" Duration="{ShadowPulse}" AutoReverse="True"/> -->
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -11368,7 +11376,7 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                     IsOpen="False"
                     PlacementTarget="{Binding ElementName=SettingsButton}" Placement="Bottom"  
                     HorizontalAlignment="Right" VerticalAlignment="Top">
-                    <Border Background="{MainBackgroundColor}" BorderBrush="{MainForegroundColor}" BorderThickness="1" CornerRadius="0" Margin="0">
+                    <Border Background="{MainBackgroundColor}" BorderBrush="{MainForegroundColor}" BorderThickness="0" CornerRadius="0" Margin="0">
                         <StackPanel Background="{MainBackgroundColor}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <MenuItem Header="Import" Name="ImportMenuItem" Foreground="{MainForegroundColor}"/>
                             <MenuItem Header="Export" Name="ExportMenuItem" Foreground="{MainForegroundColor}"/>
@@ -11401,11 +11409,11 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                         <RowDefinition Height="0.95*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Background="{MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
-                        <Button Name="WPFinstall" Content=" Install/Upgrade Selected" Margin="2" />
-                        <Button Name="WPFInstallUpgrade" Content=" Upgrade All" Margin="2"/>
-                        <Button Name="WPFuninstall" Content=" Uninstall Selection" Margin="2"/>
-                        <Button Name="WPFGetInstalled" Content=" Get Installed" Margin="2"/>
-                        <Button Name="WPFclearWinget" Content=" Clear Selection" Margin="2"/>
+                        <Button Name="WPFinstall" Content=" Install/Upgrade Selected" Margin="2" Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFInstallUpgrade" Content=" Upgrade All" Margin="2" Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFuninstall" Content=" Uninstall Selection" Margin="2" Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFGetInstalled" Content=" Get Installed" Margin="2" Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
+                        <Button Name="WPFclearWinget" Content=" Clear Selection" Margin="2" Background="{ButtonPage1BackgroundColor}" Foreground="{ButtonForegroundColor}"/>
                     </StackPanel>
 
                     <ScrollViewer Grid.Row="1" Grid.Column="0" Padding="-1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
@@ -13255,6 +13263,11 @@ $sync["AboutMenuItem"].Add_Click({
     $sync["SettingsPopup"].IsOpen = $false
     # Example usage
     $authorInfo = @"
+FORK     : PrettyWinUtil
+Author   : @EnziTheViking
+GitHub   : https://github.com/EnziTheViking/PrettyWinUtil
+
+OG Software
 Author   : @christitustech
 Runspace : @DeveloperDurp
 GUI      : @KonTy
@@ -13262,7 +13275,7 @@ MicroWin : @KonTy
 GitHub   : https://github.com/ChrisTitusTech/winutil
 Version  : $($sync.version)
 "@
-    Show-CustomDialog -Message $authorInfo -Width 400
+    Show-CustomDialog -Message $authorInfo -Width 400 -height 270
 })
 
 $sync["Form"].ShowDialog() | out-null
