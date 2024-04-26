@@ -2440,7 +2440,7 @@ function Show-CustomDialog {
     $dialog.Background = $backgroundColor
     $dialog.FontFamily = $font
 
-    # Create a Border for the green edge with rounded corners
+    # Create a Border for the White edge with rounded corners
     $border = New-Object Windows.Controls.Border
     $border.BorderBrush = $borderColor
     $border.BorderThickness = New-Object Windows.Thickness(1)  # Adjust border thickness as needed
