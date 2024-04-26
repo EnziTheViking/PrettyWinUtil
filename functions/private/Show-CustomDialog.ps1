@@ -31,7 +31,7 @@ function Show-CustomDialog {
     $foregroundColor = [Windows.Media.Brushes]::White
     $backgroundColor = [Windows.Media.Brushes]::Black
     $font = New-Object Windows.Media.FontFamily("Consolas")
-    $borderColor = [Windows.Media.Brushes]::Green
+    $borderColor = [Windows.Media.Brushes]::White
     $buttonBackgroundColor = [Windows.Media.Brushes]::Black
     $buttonForegroundColor = [Windows.Media.Brushes]::White
     $shadowColor = [Windows.Media.ColorConverter]::ConvertFromString("#AAAAAAAA")
@@ -49,7 +49,7 @@ function Show-CustomDialog {
     $dialog.Background = $backgroundColor
     $dialog.FontFamily = $font
 
-    # Create a Border for the green edge with rounded corners
+    # Create a Border for the White edge with rounded corners
     $border = New-Object Windows.Controls.Border
     $border.BorderBrush = $borderColor
     $border.BorderThickness = New-Object Windows.Thickness(1)  # Adjust border thickness as needed

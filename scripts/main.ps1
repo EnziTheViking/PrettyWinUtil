@@ -441,6 +441,11 @@ $sync["AboutMenuItem"].Add_Click({
     $sync["SettingsPopup"].IsOpen = $false
     # Example usage
     $authorInfo = @"
+FORK     : PrettyWinUtil
+Author   : @EnziTheViking
+GitHub   : https://github.com/EnziTheViking/PrettyWinUtil
+
+OG Software
 Author   : @christitustech
 Runspace : @DeveloperDurp
 GUI      : @KonTy
@@ -448,7 +453,7 @@ MicroWin : @KonTy
 GitHub   : https://github.com/ChrisTitusTech/winutil
 Version  : $($sync.version)
 "@
-    Show-CustomDialog -Message $authorInfo -Width 400
+    Show-CustomDialog -Message $authorInfo -Width 400 -height 270
 })
 
 $sync["Form"].ShowDialog() | out-null
