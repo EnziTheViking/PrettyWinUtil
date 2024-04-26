@@ -52,59 +52,13 @@ $sync.runspace.Open()
 
 $inputXML = $inputXML -replace 'mc:Ignorable="d"', '' -replace "x:N", 'N' -replace '^<Win.*', '<Window'
 
-$organizedData = @{}
-# Iterate through JSON data and organize by panel and category
-foreach ($appName in $sync.configs.applications.PSObject.Properties.Name) {
-    $appInfo = $sync.configs.applications.$appName
-
-    # Create an object for the application
-    $appObject = [PSCustomObject]@{
-        Name = $appName
-        Category = $appInfo.Category
-        Content = $appInfo.Content
-        Choco = $appInfo.choco
-        Winget = $appInfo.winget
-        Panel = $appInfo.panel
-        Link = $appInfo.link
-        Description = $appInfo.description
-    }
-
-    if (-not $organizedData.ContainsKey($appInfo.panel)) {
-        $organizedData[$appInfo.panel] = @{}
-    }
-
-    if (-not $organizedData[$appInfo.panel].ContainsKey($appInfo.Category)) {
-        $organizedData[$appInfo.panel][$appInfo.Category] = @{}
-    }
-
-    # Store application data in a sub-array under the category
-    $organizedData[$appInfo.panel][$appInfo.Category][$appName] = $appObject
-}
-
-# Iterate through organizedData by panel, category, and application
-foreach ($panel in $organizedData.Keys) {
-    foreach ($category in $organizedData[$panel].Keys) {
-        $blockXml += "<Label Content=""$($category)"" FontSize=""16""/>`n"
-        $sortedApps = $organizedData[$panel][$category].Keys | Sort-Object
-        foreach ($appName in $sortedApps) {
-            $appInfo = $organizedData[$panel][$category][$appName]
-            if ($null -eq $appInfo.Link)
-            {
-                $blockXml += "<CheckBox Name=""$appName"" Content=""$($appInfo.Content)"" ToolTip=""$($appInfo.Description)""/>`n"
-            }
-            else 
-            {
-                $blockXml += "<StackPanel Orientation=""Horizontal""><CheckBox Name=""$appName"" Content=""$($appInfo.Content)"" ToolTip=""$($appInfo.Description)"" Margin=""0,0,2,0""/><TextBlock Name=""$($appName)Link"" Style=""{StaticResource HoverTextBlockStyle}"" Text=""(?)"" ToolTip=""$($appInfo.Link)"" /></StackPanel>`n"
-            }
-        }
-    }
-
-    $inputXML = $inputXML -replace "{{InstallPanel$panel}}", $blockXml
-    $blockXml = ""
-}
-
 if ((Get-WinUtilToggleStatus WPFToggleDarkMode) -eq $True) {
-    $ctttheme = 'Matrix'
+    if (Invoke-WinUtilGPU -eq $True) {
+        $ctttheme = 'Matrix'
+    }
+    else {
+        $ctttheme = 'Dark'
+    }
 }
 else {
     $ctttheme = 'Classic'
@@ -168,7 +122,7 @@ $sync.keys | ForEach-Object {
                     Write-Debug "Opening: $($Sender.ToolTip)"
                 })
             }
-       
+
         }
     }
 }
@@ -287,7 +241,7 @@ $sync["Form"].Add_Deactivated({
 
 $sync["Form"].Add_ContentRendered({
 
-    try { 
+    try {
         [void][Window]
     } catch {
 Add-Type @"
@@ -300,11 +254,11 @@ Add-Type @"
             [DllImport("user32.dll")]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool GetWindowRect(IntPtr hWnd, out RECT lpRect);
-            
+
             [DllImport("user32.dll")]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool MoveWindow(IntPtr handle, int x, int y, int width, int height, bool redraw);
-            
+
             [DllImport("user32.dll")]
             public static extern int GetSystemMetrics(int nIndex);
         };
@@ -368,7 +322,7 @@ Add-Type @"
     } else {
         Write-Debug "Unable to retrieve information about the primary monitor."
     }
-    
+
     Invoke-WPFTab "WPFTab1BT"
     $sync["Form"].Focus()
 
@@ -420,20 +374,20 @@ $sync["CheckboxFilter"].Add_TextChanged({
 
     $filter = Get-WinUtilVariables -Type CheckBox
     $CheckBoxes = $sync.GetEnumerator() | Where-Object { $psitem.Key -in $filter }
-    
+
     foreach ($CheckBox in $CheckBoxes) {
         # Check if the checkbox is null or if it doesn't have content
-        if ($CheckBox -eq $null -or $CheckBox.Value -eq $null -or $CheckBox.Value.Content -eq $null) { 
+        if ($CheckBox -eq $null -or $CheckBox.Value -eq $null -or $CheckBox.Value.Content -eq $null) {
             continue
         }
-    
-        $textToSearch = $sync.CheckboxFilter.Text
+
+        $textToSearch = $sync.CheckboxFilter.Text.ToLower()
         $checkBoxName = $CheckBox.Key
         $textBlockName = $checkBoxName + "Link"
-    
+
         # Retrieve the corresponding text block based on the generated name
         $textBlock = $sync[$textBlockName]
-    
+
         if ($CheckBox.Value.Content.ToLower().Contains($textToSearch)) {
             $CheckBox.Value.Visibility = "Visible"
              # Set the corresponding text block visibility
@@ -449,7 +403,7 @@ $sync["CheckboxFilter"].Add_TextChanged({
             }
         }
     }
-    
+
 })
 
 # Define event handler for button click
@@ -487,11 +441,6 @@ $sync["AboutMenuItem"].Add_Click({
     $sync["SettingsPopup"].IsOpen = $false
     # Example usage
     $authorInfo = @"
-FORK     : PrettyWinUtil
-Author   : @EnziTheViking
-GitHub   : https://github.com/EnziTheViking/PrettyWinUtil
-
-OG Software
 Author   : @christitustech
 Runspace : @DeveloperDurp
 GUI      : @KonTy
@@ -499,7 +448,7 @@ MicroWin : @KonTy
 GitHub   : https://github.com/ChrisTitusTech/winutil
 Version  : $($sync.version)
 "@
-    Show-CustomDialog -Message $authorInfo -Width 400 -height 270
+    Show-CustomDialog -Message $authorInfo -Width 400
 })
 
 $sync["Form"].ShowDialog() | out-null

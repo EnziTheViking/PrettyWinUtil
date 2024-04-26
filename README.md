@@ -1,24 +1,3 @@
-# Color Scheme Change
-Tested & Working 1/30/2024 :white_check_mark:
-```
-irm enzitheviking.com | iex
-```
-```
-irm https://raw.githubusercontent.com/EnziTheViking/PrettyWinUtil/main/winutil.ps1 | iex
-```
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/36221761-a7df-4a69-8bfd-167b08f6c392)
-
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/a971c00a-4aa5-4045-a106-3bf7264ef98b)
-
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/3f422f4c-9781-4411-b246-54c0707c500b)
-
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/b599c6c5-42a7-45a1-ac39-1c8a4e27a781)
-
-![image](https://github.com/EnziTheViking/PrettyWinUtil/assets/79238110/dfcb1aa3-cf8e-4a4f-b87e-57917aedff86)
-
----
-
-
 # Chris Titus Tech's Windows Utility
 
 This utility is a compilation of Windows tasks I perform on each Windows system I use. It is meant to streamline *installs*, debloat with *tweaks*, troubleshoot with *config*, and fix Windows *updates*. I am extremely picky about any contributions to keep this project clean and efficient. 
@@ -44,13 +23,14 @@ Winutil must be run in Admin mode because it performs system-wide tweaks. To ach
 #### Simple way
 
 ```
-iwr -useb https://christitus.com/win | iex
-```
-or by executing: 
-```
 irm https://christitus.com/win | iex
 ```
 Courtesy of the issue raised at: [#144](/../../issues/144)
+
+or by executing: 
+```
+iwr -useb https://christitus.com/win | iex
+```
 
 if for some reason this site is not reachable from your country please try running it directly from github
 
@@ -66,12 +46,12 @@ Some features are avaliable through automation. This allows you to save your con
   ![GetInstalled](/wiki/Get-Installed.png)
 2. Click on the Settings cog in the upper right corner and chose Export, chose file file and location, this will export the setting file.
   ![SettingsExport](/wiki/Settings-Export.png)
-3. Copy this file to a USB or somewhere you can use after Windows installation
-4. Use Microwin tab to create a cusom Windows image
-5. Install the Windows image
-6. In the new Windows, Open PowerShell in the admin mode and run command to automatically apply twekas and install apps from the config file
+3. Copy this file to a USB or somewhere you can use after Windows installation.
+4. Use Microwin tab to create a custom Windows image.
+5. Install the Windows image.
+6. In the new Windows, Open PowerShell in the admin mode and run command to automatically apply tweaks and install apps from the config file.
 ```
-irm https://christitus.com/win -Config [path-to-your-config] -Run | iex
+iex "& { $(irm christitus.com/win) } -Config [path-to-your-config] -Run"
 ```
 7. Have a cup of coffee! Come back when it's done.
 
@@ -118,7 +98,9 @@ If you are still having issues try changing your DNS provider to 1.1.1.1 || 1.0.
 
   - Essential Tweaks: Offers a collection of essential tweaks aimed at improving system performance, privacy, and resource utilization. These tweaks include creating a system restore point, disabling telemetry, Wi-Fi Sense, setting services to manual, disabling location tracking, and HomeGroup, among others.
 
-  - Misc. Tweaks: Encompasses a range of various tweaks to further optimize the system. These tweaks include enabling/disabling power throttling, enabling num lock on startup, removing Cortana and Edge, disabling User Account Control (UAC), notification panel, and configuring TPM during updates, among others.
+  - Advanced Tweaks: Encompasses a range of various advanced power user tweaks to further optimize the system. These tweaks include removing OneDrive and Edge, disabling User Account Control (UAC), notification panel, among others.
+
+  - Toggles: Adds easy to use, one click shortcuts for toggling dark mode, NumLock on startup, file extensions, sticky keys, among others.
 
   - Additional Tweaks: Introduces various other tweaks such as enabling dark mode, changing DNS settings, adding an Ultimate Performance mode, and creating shortcuts for WinUtil tools. These tweaks provide users with additional customization options to tailor their system to their preferences.
 

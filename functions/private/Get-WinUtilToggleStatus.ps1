@@ -80,4 +80,22 @@ Function Get-WinUtilToggleStatus {
             return $false
         }
     }
+    if ($ToggleSwitch -eq "WPFToggleStickyKeys") {
+        $StickyKeys = (Get-ItemProperty -path 'HKCU:\Control Panel\Accessibility\StickyKeys').Flags
+        if($StickyKeys -eq 58){
+            return $false
+        }
+        else{
+            return $true
+        }
+    }
+    if ($ToggleSwitch -eq "WPFToggleTaskbarWidgets") {
+        $TaskbarWidgets = (Get-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced").TaskBarDa
+	if($TaskbarWidgets -eq 0) {
+            return $false
+	}
+	else{
+            return $true
+	}
+    }
 }

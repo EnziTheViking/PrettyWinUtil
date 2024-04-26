@@ -27,6 +27,7 @@ function Invoke-WPFButton {
         "WPFclear" {Invoke-WPFPresets -preset $null -imported $true}
         "WPFclearWinget" {Invoke-WPFPresets -preset $null -imported $true -CheckBox "WPFInstall"}
         "WPFtweaksbutton" {Invoke-WPFtweaksbutton}
+        "WPFOOSUbutton" {Invoke-WPFOOSU -action "customize"}
         "WPFAddUltPerf" {Invoke-WPFUltimatePerformance -State "Enabled"}
         "WPFRemoveUltPerf" {Invoke-WPFUltimatePerformance -State "Disabled"}
         "WPFundoall" {Invoke-WPFundoall}
@@ -43,14 +44,16 @@ function Invoke-WPFButton {
         "WPFUpdatesdefault" {Invoke-WPFUpdatesdefault}
         "WPFFixesUpdate" {Invoke-WPFFixesUpdate}
         "WPFFixesWinget" {Invoke-WPFFixesWinget}
+        "WPFRunAdobeCCCleanerTool" {Invoke-WPFRunAdobeCCCleanerTool}
         "WPFFixesNetwork" {Invoke-WPFFixesNetwork}
         "WPFUpdatesdisable" {Invoke-WPFUpdatesdisable}
         "WPFUpdatessecurity" {Invoke-WPFUpdatessecurity}
-        "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil"}
+        "WPFWinUtilShortcut" {Invoke-WPFShortcut -ShortcutToAdd "WinUtil" -RunAsAdmin $true}
         "WPFGetInstalled" {Invoke-WPFGetInstalled -CheckBox "winget"}
         "WPFGetInstalledTweaks" {Invoke-WPFGetInstalled -CheckBox "tweaks"}
         "WPFGetIso" {Invoke-WPFGetIso}
         "WPFMicrowin" {Invoke-WPFMicrowin}
         "WPFCloseButton" {Invoke-WPFCloseButton}
+        "MicrowinScratchDirBT" {Invoke-ScratchDialog}
     }
 }
