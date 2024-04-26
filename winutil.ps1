@@ -2422,7 +2422,7 @@ function Show-CustomDialog {
     $foregroundColor = [Windows.Media.Brushes]::White
     $backgroundColor = [Windows.Media.Brushes]::Black
     $font = New-Object Windows.Media.FontFamily("Consolas")
-    $borderColor = [Windows.Media.Brushes]::Green
+    $borderColor = [Windows.Media.Brushes]::White
     $buttonBackgroundColor = [Windows.Media.Brushes]::Black
     $buttonForegroundColor = [Windows.Media.Brushes]::White
     $shadowColor = [Windows.Media.ColorConverter]::ConvertFromString("#AAAAAAAA")
